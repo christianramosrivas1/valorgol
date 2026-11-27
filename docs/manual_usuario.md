@@ -1,6 +1,6 @@
 # Manual de usuario de ValorGol
 
-ValorGol es una aplicación web para explorar datos reales de jugadores de fútbol profesional y jugar a adivinar cuál tiene mayor valor de mercado.
+ValorGol es una aplicación web para explorar datos reales de jugadores de fútbol profesional y jugar a adivinar cuál tiene mayor valor de mercado. ¡Empecemos!
 
 ## 1. Requisitos
 
