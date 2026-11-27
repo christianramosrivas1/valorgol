@@ -1,26 +1,18 @@
 """Página Jugar: '¿Cuánto vale?' - elige qué jugador tiene mayor valor de mercado."""
 import streamlit as st
-
 from src.data import obtener_datos
 from src.juego import Partida
 from src.ui import encabezado, formato_eur, icono_posicion, mostrar_foto
-
 encabezado("¿Cuánto vale?", "Adivina qué jugador tiene el mayor valor de mercado.")
 df = obtener_datos()
-
-
 def iniciar_partida():
     """Crea una partida nueva sin borrar el historial acumulado."""
     st.session_state["partida"] = Partida(df)
     st.session_state["feedback"] = None
     st.session_state["partida_guardada"] = False
-
-
 def elegir(indice):
     """Registra la respuesta del usuario en la partida actual."""
     st.session_state["feedback"] = st.session_state["partida"].responder(indice)
-
-
 with st.expander("📖 Instrucciones", expanded=st.session_state["partida"] is None):
     st.markdown(
         "- Verás **dos jugadores reales** del dataset.\n"
@@ -30,14 +22,11 @@ with st.expander("📖 Instrucciones", expanded=st.session_state["partida"] is N
         "- Si fallas, la racha vuelve a cero.\n"
         "- Tus partidas quedan guardadas en **Mis datos** mientras dure la sesión."
     )
-
 partida = st.session_state["partida"]
-
 if partida is None:
     st.info("Pulsa el botón para comenzar.")
     st.button("▶️ Nueva partida", on_click=iniciar_partida, type="primary")
     st.stop()
-
 # Retroalimentación de la última respuesta
 fb = st.session_state["feedback"]
 if fb:
@@ -49,7 +38,6 @@ if fb:
         st.success(f"✅ ¡Correcto! +{fb['puntos']} puntos. {detalle}")
     else:
         st.error(f"❌ Fallaste. {detalle}")
-
 # Fin de la partida
 if partida.terminada:
     if not st.session_state["partida_guardada"]:
@@ -66,7 +54,6 @@ if partida.terminada:
     st.caption(f"Tu mejor puntaje en esta sesión: {mejor}")
     st.button("🔄 Jugar de nuevo", on_click=iniciar_partida, type="primary")
     st.stop()
-
 # Ronda en curso
 st.progress(
     partida.ronda_actual / partida.rondas,
