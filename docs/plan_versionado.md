@@ -1,7 +1,7 @@
 # Plan de versionado
 
-**Proyecto:** ValorGol. **Integrantes:** Carlos Andrés Herrera Benavides y Cristian Daniel Ramos Rivas.
-**Inicio del proyecto:** 3 de noviembre de 2026 (día 1). **Entrega final:** 29 de noviembre de 2026 (día 27).
+**Proyecto:** ValorGol. **Integrantes:** Carlos Andrés Herrera Benavides, Cristian Daniel Ramos Rivas.
+
 
 ## 1. Convención de versiones
 
