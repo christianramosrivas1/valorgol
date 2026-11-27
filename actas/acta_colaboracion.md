@@ -47,4 +47,4 @@ Los integrantes declaran haber leído y aceptado este documento.
 | Nombre | Firma / aceptación | Fecha |
 |---|---|---|
 | Carlos Andrés Herrera Benavides | | 8 de noviembre de 2026 |
-| Cristian Daniel Ramos Rivas | | 8 de noviembre de 2026 |
+| Cristian D. Ramos Rivas | | 8 de noviembre de 2026 |
